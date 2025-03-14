@@ -11,27 +11,38 @@ Site web d'entreprise moderne avec animations 3D et design interactif.
 - Authentification sécurisée
 - Déploiement sur Vercel
 
-## Déploiement sur Vercel
+## Déploiement sur Vercel avec GitHub
 
-1. Créez un compte sur [Vercel](https://vercel.com)
-2. Connectez votre dépôt Git à Vercel
-3. Dans les paramètres du projet sur Vercel, ajoutez les variables d'environnement suivantes :
-   - `DATABASE_URL` : URL de votre base de données Neon
-   - `SESSION_SECRET` : Clé secrète pour les sessions
-   - `PGPORT`, `PGUSER`, `PGPASSWORD`, `PGHOST`, `PGDATABASE` : Informations de connexion à la base de données
-
-4. Déployez le projet :
+1. **Préparation GitHub**
+   - Sur GitHub.com, créez un nouveau repository nommé "template-3d-website"
+   - Copiez l'URL du repository (par exemple : https://github.com/haythem-dev/template-3d-website)
+   - Dans votre terminal, exécutez :
    ```bash
-   npm install -g vercel
-   vercel
+   git init
+   git add .
+   git commit -m "Initial commit"
+   git remote add origin [URL_DU_REPOSITORY]
+   git push -u origin main
    ```
 
-5. Pour les déploiements suivants :
-   ```bash
-   vercel --prod
-   ```
+2. **Configuration Vercel**
+   - Allez sur [Vercel](https://vercel.com)
+   - Connectez votre compte GitHub
+   - Cliquez sur "Import Project"
+   - Sélectionnez le repository "template-3d-website"
+   - Dans les paramètres du projet, ajoutez les variables d'environnement :
+     - `DATABASE_URL` : URL de votre base de données Neon
+     - `SESSION_SECRET` : Clé secrète pour les sessions
+     - `PGPORT`, `PGUSER`, `PGPASSWORD`, `PGHOST`, `PGDATABASE` : Informations de connexion à la base de données
 
-Le site sera automatiquement déployé à chaque push sur la branche principale.
+3. **Déploiement**
+   - Le déploiement se fera automatiquement après chaque push
+   - Vercel fournira une URL de prévisualisation
+
+4. **Configuration du domaine (optionnel)**
+   - Dans les paramètres du projet sur Vercel, section "Domains"
+   - Ajoutez votre domaine personnalisé
+   - Suivez les instructions pour configurer les DNS
 
 ## Développement local
 
