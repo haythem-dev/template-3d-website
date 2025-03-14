@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist/public",
+  "installCommand": "npm install",
+  "env": {
+    "PGPORT": "@pgport",
+    "PGUSER": "@pguser",
+    "PGPASSWORD": "@pgpassword",
+    "PGHOST": "@pghost",
+    "PGDATABASE": "@pgdatabase",
+    "DATABASE_URL": "@database_url",
+    "SESSION_SECRET": "@session_secret"
+  },
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
+  ]
+}
