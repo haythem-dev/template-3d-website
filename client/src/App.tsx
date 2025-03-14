@@ -4,6 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Background3D from '@/components/Background3D';
+import { CvForm } from "./components/CvForm"; //Import added here
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -108,6 +109,7 @@ function App() {
       <section className="relative py-20 bg-gray-900/80">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16">Contact Us</h2>
+          <CvForm /> {/* CvForm component added here */}
           <form className="max-w-lg mx-auto">
             <div className="mb-6">
               <input
