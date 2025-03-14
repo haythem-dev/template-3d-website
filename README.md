@@ -1,6 +1,6 @@
 # TEMPLATE - Site Web Moderne
 
-Site web d'entreprise moderne avec animations 3D et design interactif. Test de connexion GitHub.
+Site web d'entreprise moderne avec animations 3D et design interactif. Test de connexion GitHub. Test de connexion GitHub.
 
 ## Technologies utilisées
 
